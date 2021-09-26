@@ -9,8 +9,8 @@
  * 
  */
 #include <cstdio>
-#include <R2D/utility/File.h>
-#include <R2D/utility/Strings.h>
+#include "File.h"
+#include "Strings.h"
 #include <sstream>
 
 using namespace rg;

@@ -1,4 +1,4 @@
-#include <R2D/utility/Strings.h>
+#include "Strings.h"
 
 
 std::vector<std::string> rap::splitStr(const std::string &str, const std::string &delimiter) {
