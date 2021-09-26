@@ -7,22 +7,22 @@
 #include <vector>
 
 class  Snake {
-private:
-
-    int size = 1;
+protected:
     const int blockSize = 16;
-    std::vector<sf::Vector2i> snakeBody;
+    std::vector<sf::Vector2f> snakeBody;
     sf::Color snakeColor = sf::Color::Red;
     
 
     std::vector<sf::Vertex> vertexArray;
-    sf::Vector2i movementDir = sf::Vector2i(-1, 0);
-    sf::Vector2f postition = sf::Vector2f(100, 100);
+    sf::Vector2f movementDir = sf::Vector2f(-1, 0);
+    float speed = 16.f;
+    sf::Vector2f distanceCovered = sf::Vector2f(0, 0);
 
 public:
 
     Snake();
-    void setSize(int sz) {size = sz;};
     void setColor(const sf::Color &clr);
-    void draw(sf::RenderWindow &win);
+    void increaseSize();
+    virtual void run(float delta);
+    virtual void draw(sf::RenderWindow &win);
 };
